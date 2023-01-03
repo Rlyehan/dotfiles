@@ -11,6 +11,7 @@ brew 'autoconf'
 brew 'git'
 brew 'iperf'
 brew 'openssl'
+brew 'fzf'
 
 # Casks
 cask 'discord'

@@ -1,0 +1,75 @@
+[user]
+	email = max_hub@gmx.net
+	name = Maximilian Huber
+
+[color]
+	ui = auto
+
+[alias]
+	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
+	st = status
+	c = commit
+	check = checkout
+	amend = commit --amend --no-edit
+	prune = fetch --prune
+	uncommit = reset --soft HEAD~1
+	push-lease = push --force-with-lease
+	reword = commit --amend
+	review-local = "!git lg @{push}.."
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
+[core]
+	editor = code --wait
+	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
+	excludesfile = ~/.gitignore
+
+[init]
+	defaultBranch = master
+
+[credentials]
+	helper = osxkeychain
+
+[diff]
+	mnemonicPrefix = true
+	rename = true
+	tool = vscode
+
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[merge]
+	ff = false
+	conflictstyle = diff3
+
+[mergetool]
+	keepBackup = false
+	keepTemporaries = false
+	writeToTemp = true
+	prompt = false
+
+[pull]
+	rebase = merges
+
+[commit]
+	gpgSign = true
+
+[push]
+	default = simple
+	followTags = true
+
+[status]
+	showUntrackedFiles = all
+
+[color "branch"]
+  	upstream = cyan
+
+[tag]
+  	sort = version:refname
+
+[versionsort]
+  	prereleaseSuffix = -pre
+  	prereleaseSuffix = .pre
+  	prereleaseSuffix = -beta
+  	prereleaseSuffix = .beta
+  	prereleaseSuffix = -rc
+  	prereleaseSuffix = .rc

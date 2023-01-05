@@ -12,6 +12,7 @@ brew 'git'
 brew 'iperf'
 brew 'openssl'
 brew 'fzf'
+brew 'pipx'
 
 # Casks
 cask 'discord'

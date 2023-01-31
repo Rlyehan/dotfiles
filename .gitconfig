@@ -8,7 +8,7 @@
 [alias]
 	aliases = !git config --get-regexp alias | sed -re 's/alias\\.(\\S*)\\s(.*)$/\\1 = \\2/g'
 	st = status
-	c = commit
+	c = commit -m
 	check = checkout
 	amend = commit --amend --no-edit
 	prune = fetch --prune
